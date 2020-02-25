@@ -19,28 +19,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="514" height="1154"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="kart_0" translatesAutoresizingMaskIntoConstraints="NO" id="YwC-Ei-3JI">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="kart_0" translatesAutoresizingMaskIntoConstraints="NO" id="YwC-Ei-3JI">
                                 <rect key="frame" x="67" y="426" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="0BI-Yd-UaU" appends="YES" id="Hl3-RY-6PY"/>
+                                    <outletCollection property="gestureRecognizers" destination="Sn5-N8-zts" appends="YES" id="rdt-aS-9mc"/>
+                                    <outletCollection property="gestureRecognizers" destination="T01-Un-uzV" appends="YES" id="aup-o5-LVQ"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="kart_1" translatesAutoresizingMaskIntoConstraints="NO" id="Zt7-pv-8Pa">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="kart_1" translatesAutoresizingMaskIntoConstraints="NO" id="Zt7-pv-8Pa">
                                 <rect key="frame" x="201" y="426" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="hE6-i6-brc" appends="YES" id="1Ap-0K-dJw"/>
+                                    <outletCollection property="gestureRecognizers" destination="SiC-lw-RNw" appends="YES" id="9y6-3a-NUH"/>
+                                    <outletCollection property="gestureRecognizers" destination="QGV-We-S7V" appends="YES" id="lFM-zs-uca"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="kart_2" translatesAutoresizingMaskIntoConstraints="NO" id="o0e-ve-Pul">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="kart_2" translatesAutoresizingMaskIntoConstraints="NO" id="o0e-ve-Pul">
                                 <rect key="frame" x="140" y="554" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="bQS-jp-KtU" appends="YES" id="pZw-LF-0nu"/>
+                                    <outletCollection property="gestureRecognizers" destination="k9v-uL-xW5" appends="YES" id="ho9-Bw-hbA"/>
+                                    <outletCollection property="gestureRecognizers" destination="TGv-kl-bok" appends="YES" id="3n9-ky-Ujg"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -49,21 +52,36 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="0BI-Yd-UaU">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Sn5-N8-zts">
                     <connections>
-                        <action selector="didPanKartView:" destination="BYZ-38-t0r" id="M7J-iw-IRb"/>
+                        <action selector="didPanKartView:" destination="BYZ-38-t0r" id="Xnb-k6-kaW"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="hE6-i6-brc">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="SiC-lw-RNw">
                     <connections>
-                        <action selector="didPanKartView:" destination="BYZ-38-t0r" id="gQf-mM-HUi"/>
+                        <action selector="didPanKartView:" destination="BYZ-38-t0r" id="xV6-4c-N2C"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="bQS-jp-KtU">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="k9v-uL-xW5">
                     <connections>
-                        <action selector="didPanKartView:" destination="BYZ-38-t0r" id="WjJ-9k-p4u"/>
+                        <action selector="didPanKartView:" destination="BYZ-38-t0r" id="dYY-bW-6Kr"/>
                     </connections>
                 </panGestureRecognizer>
+                <pinchGestureRecognizer id="T01-Un-uzV">
+                    <connections>
+                        <action selector="didPinchKart:" destination="BYZ-38-t0r" id="3Vm-Sc-vAY"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="QGV-We-S7V">
+                    <connections>
+                        <action selector="didPinchKart:" destination="BYZ-38-t0r" id="Qvk-JO-XX5"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="TGv-kl-bok">
+                    <connections>
+                        <action selector="didPinchKart:" destination="BYZ-38-t0r" id="Q53-Ex-ERu"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
